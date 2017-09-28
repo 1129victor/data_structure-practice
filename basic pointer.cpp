@@ -19,8 +19,10 @@ void print1(int *ptr, int rows[])
 {
 	int i;
 	printf("Address Contents\n");
+	
 	for(i = 0; i < 5; i++){
 		printf("%8u%5d\n", ptr+ i, *(ptr + i));
 	}
+	
 	printf("\n");
 }
