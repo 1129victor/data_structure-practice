@@ -5,9 +5,7 @@
 void perm(char *, int, int);
 
 int main (void)
-{
-	double start, stop, duration;
-	
+{	
 	int n;
 	char list[100];
 	
@@ -16,18 +14,9 @@ int main (void)
 	fflush(stdin);
 	for(int i = 0; i < n; i++){
 		scanf("%c", &list[i]);
-		
 	}
 	
-	start = clock();
-	//printf("%c%c%c", list[0], list[1], list[2]);
-	perm(list, 0, n - 1);
-	
-	stop = clock();
-	
-	duration = ((double)(stop - start)) / CLK_TCK;
-	
-	printf("duration = %lf\n", duration);
+	perm(list, 0, n - 1);	
 	
 	system("pause");
 }
