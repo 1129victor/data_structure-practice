@@ -23,7 +23,7 @@ int main (void)
 	printf("How many elements in A array\n");
 	scanf("%d", &a[0].value);
 	
-	printf("輸入矩陣\n"); 
+	printf("Input sparse matrix\n"); 
 	for(int i = 1; i <= a[0].value; i++){
 		scanf("%d", &a[i].row);
 		scanf("%d", &a[i].col);
@@ -32,7 +32,7 @@ int main (void)
 	
 	transpose(a, b);
 	
-	printf("轉置結果\n");
+	printf("tranpose result\n");
 	for(int j = 1; j <= b[0].value; j++){
 		printf("%d ", b[j].row);
 		printf("%d ", b[j].col);

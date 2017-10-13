@@ -26,6 +26,7 @@ int main (void)
 	char *result;
 	int close = 0, first = 0;
 
+	printf("Input file name:\n");
 	scanf("%s", file);
 	
 		
@@ -91,6 +92,7 @@ int main (void)
 		*/
 		mmult(a, b, d);
 		
+		printf("output mmult result");
 		for(i = 1; i <= d[0].value; i++){
 			printf("%d ", d[i].row);
 			printf("%d ", d[i].col);

@@ -17,7 +17,7 @@ int main (void)
 	int startB = 0, finishB = 0;
 	int count = 0;
 		
-	printf("輸入多項式A	(輸入完畢按CTRL+Z)\n");
+	printf("Input first polynomial	(press CTRL+Z when input done)\n");
 	
 	while(scanf("%f", &terms[count].coef) != EOF){		
 		scanf("%d", &terms[count].expon);
@@ -27,7 +27,7 @@ int main (void)
 	finishA = --count;
 	startB = (finishA + 1);
 	
-	printf("輸入多項式B	(輸入完畢按CTRL+Z)\n");
+	printf("Input second polynomial	(press CTRL+Z when input done)\n");
 	count = startB;
 	
 	while(scanf("%f", &terms[count].coef) != EOF){		
@@ -37,7 +37,7 @@ int main (void)
 	
 	finishB = --count;
 		
-	printf("輸出結果\n");
+	printf("result\n");
 	printf("coef    expon\n");
 	padd(startA, finishA, startB, finishB);
 	

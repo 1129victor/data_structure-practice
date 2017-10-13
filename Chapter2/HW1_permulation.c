@@ -14,7 +14,7 @@ int main (void)
 	int n;
 	FILE *cfptr;
 	
-	printf("輸入讀取檔案:\n");
+	printf("Input file name:\n");
 	while(scanf("%s", openfile) != EOF){
 		
 		if((cfptr = fopen(openfile, "r")) == NULL){
@@ -29,7 +29,7 @@ int main (void)
 		
 		fclose(cfptr);
 		printf("\n");
-		printf("輸入讀取檔案:\n");
+		printf("Input file name:\n");
 	}	
 	
 	return 0;
