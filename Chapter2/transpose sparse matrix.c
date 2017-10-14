@@ -24,7 +24,8 @@ int main (void)
 	scanf("%d", &a[0].value);
 	
 	printf("Input sparse matrix\n"); 
-	for(int i = 1; i <= a[0].value; i++){
+	int i = 1;
+	for(i = 1; i <= a[0].value; i++){
 		scanf("%d", &a[i].row);
 		scanf("%d", &a[i].col);
 		scanf("%d", &a[i].value);
@@ -33,7 +34,8 @@ int main (void)
 	transpose(a, b);
 	
 	printf("tranpose result\n");
-	for(int j = 1; j <= b[0].value; j++){
+	int j = 1;
+	for(j = 1; j <= b[0].value; j++){
 		printf("%d ", b[j].row);
 		printf("%d ", b[j].col);
 		printf("%d\n", b[j].value);

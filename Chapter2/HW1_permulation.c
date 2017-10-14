@@ -45,10 +45,13 @@ void perm(char *list, int i, int n)
 		}
 		printf(" ");
 	}else{
+		
 		for(j = i; j <= n; j++){
-			SWAP(list[i], list[j], temp);	
-			perm(list, i + 1, n);
-			SWAP(list[i], list[j], temp);
+			if((i == j) || (list[i] != list[j])){ 
+				SWAP(list[i], list[j], temp);	
+				perm(list, i + 1, n);
+				SWAP(list[i], list[j], temp);
+			} 
 		}
 	}
 }
