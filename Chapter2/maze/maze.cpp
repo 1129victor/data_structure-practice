@@ -3,6 +3,7 @@
 #include<string.h>
 #include <windows.h> 
 
+
 #define MAX_SIZE 101
 
 typedef struct{
@@ -11,14 +12,14 @@ typedef struct{
 }offset;
 offset move[8];
 
-typedef struct{
+typedef struct element{
 	short int row;
 	short int col;
 	short int dir;
 }element;
-element stack[MAX_SIZE];
-//malloc(stack, sizeof(stack));
-//int capacity = 1;
+//element *stack = NULL;
+element *stack = (element*)malloc(sizeof(element));
+int capacity = 1;
 int top = -1;
 
 int maze[MAX_SIZE][MAX_SIZE], mark[MAX_SIZE][MAX_SIZE];
@@ -87,6 +88,7 @@ int main(void)
 		
 		
 		path();
+		free(stack);
 	}
 	
 	return 0;
@@ -149,7 +151,7 @@ void path(void)
 
 void push(element item)
 {
-	if(top >= MAX_SIZE - 1){
+	if(top >= capacity){
 		
 		stackfull();
 		
@@ -159,13 +161,13 @@ void push(element item)
 
 void stackfull()
 {
+	
+	stack = (element *)realloc(stack, 2 * capacity * sizeof(stack));
+	capacity *= 2;
 	/*
-	realloc(stack, 2 * capacity * sizeof(*stack));
-	capacity * 2;
-	*/
 	fprintf(stderr, "ฐ๏ล|คwบก\n");
 	exit(1);
-	
+	*/
 }
 
 element pop()
