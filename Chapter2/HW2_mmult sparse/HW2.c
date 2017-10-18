@@ -37,7 +37,7 @@ int main (void)
 		{
 			result = strtok (origin," ");
 			while (result != NULL){
-		  		//printf ("%s", result);
+		  		printf ("%s", result);
 		  		if((close == 0) && (*result != 10) && (*result != 124)){
 		  			if(*result != 48){
 		  				a[countarray].row = countrow;
@@ -92,7 +92,7 @@ int main (void)
 		*/
 		mmult(a, b, d);
 		
-		printf("output mmult result");
+		printf("output mmult result\n");
 		for(i = 1; i <= d[0].value; i++){
 			printf("%d ", d[i].row);
 			printf("%d ", d[i].col);
